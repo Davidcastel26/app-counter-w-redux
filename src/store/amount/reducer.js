@@ -16,6 +16,7 @@ const reducer = (state = initialState, action)=>{
             amount: state.amount - 10
         }
     }
+    return {...state}
 }
 
 export default reducer;
