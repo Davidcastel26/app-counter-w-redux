@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 
 import {deposit, withdraw} from '../../store/amount/action'
+import { selectCurrentAmount } from '../../store/amount/reducer';
  
 const mapStateToProps = (state) =>{
     return{
-        amount: state.reducer.amount,
+        amount: selectCurrentAmount(state),
     }
 }
 const Counter = ({amount, deposit, withdraw}) =>{
